@@ -7,6 +7,7 @@ function App() {
   const [submittedMessage, setSubmittedMessage] = useState(null)
 
   const handleSubmit = () => {
+    console.log('handleSubmit, message:', message)
     if (message.trim() !== '') {
       const newMessage = <p>{message}</p>
       setMessage('')
