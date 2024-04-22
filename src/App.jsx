@@ -15,13 +15,18 @@ function App() {
     }
   }
 
+  const settingMessage = (value) => {
+    console.log('settingMessage, value:', value)
+    setMessage(value)
+  }
+
   return (
     <>
 
       <div className="card">
         <textarea
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e) => settingMessage(e.target.value)}
           placeholder="Enter your message"
         />
         <button aria-label="Submit" onClick={handleSubmit}>
